@@ -1,26 +1,23 @@
 pipeline {
   agent any
   stages {
-    stage('Buzz Buzz') {
+    stage('Build') {
       parallel {
-        stage('Buzz Buzz') {
+        stage('Build') {
           steps {
-            echo 'Bees Buzz!'
+            sleep 30
+            echo 'Bees Buz'
           }
         }
 
-        stage('Sting Sting') {
+        stage('Unbuild') {
           steps {
-            echo 'Wasps Sting!'
+            echo 'Slickery 1'
+            sleep(time: 1, unit: 'MINUTES')
+            echo 'Slickery 2'
           }
         }
 
-      }
-    }
-
-    stage('Bees Bees') {
-      steps {
-        echo 'Buzz, Bees, Buzz!'
       }
     }
 
